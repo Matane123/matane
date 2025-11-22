@@ -1,0 +1,539 @@
+/* ========================================
+   PORTFOLIO MATANE - FICHIER CSS
+   ======================================== */
+
+/* Reset et base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* ========================================
+   HEADER & NAVIGATION
+   ======================================== */
+
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 5%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    animation: slideDown 0.6s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #667eea;
+}
+
+/* ========================================
+   SECTION HERO
+   ======================================== */
+
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 5% 4rem;
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.95);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+/* ========================================
+   BOUTONS CTA
+   ======================================== */
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: white;
+    color: #667eea;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-button.secondary:hover {
+    background: white;
+    color: #667eea;
+}
+
+/* ========================================
+   TITRES DE SECTION
+   ======================================== */
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    margin: 4rem 0 3rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+/* ========================================
+   SECTION À PROPOS
+   ======================================== */
+
+.about-section {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 3rem 5%;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text h2 {
+    color: #667eea;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.about-text strong {
+    color: #667eea;
+    font-weight: 600;
+}
+
+/* ========================================
+   CARTES DE STATISTIQUES
+   ======================================== */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: scale(1.05);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* ========================================
+   CARTES DE FONCTIONNALITÉS
+   ======================================== */
+
+.features {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease backwards;
+}
+
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+.feature-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: #667eea;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ========================================
+   SECTION DÉMO CODE
+   ======================================== */
+
+.demo-section {
+    max-width: 1200px;
+    margin: 2rem auto 4rem;
+    padding: 4rem 5%;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+}
+
+.demo-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #667eea;
+    margin-bottom: 1.5rem;
+}
+
+.demo-section .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.code-demo {
+    background: #282c34;
+    color: #abb2bf;
+    padding: 2rem;
+    border-radius: 15px;
+    font-family: 'Courier New', Consolas, monospace;
+    overflow-x: auto;
+    box-shadow: inset 0 4px 10px rgba(0,0,0,0.3);
+    font-size: 0.95rem;
+}
+
+.code-line {
+    margin: 0.5rem 0;
+}
+
+/* Coloration syntaxique */
+.keyword { 
+    color: #c678dd; 
+    font-weight: bold;
+}
+
+.string { 
+    color: #98c379; 
+}
+
+.function { 
+    color: #61afef; 
+}
+
+.comment { 
+    color: #5c6370; 
+    font-style: italic; 
+}
+
+.number { 
+    color: #d19a66; 
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    text-align: center;
+    padding: 3rem 5%;
+    color: white;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 1rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+    /* Hero */
+    .hero h1 { 
+        font-size: 2.5rem; 
+    }
+    
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    /* Navigation */
+    .nav-links { 
+        gap: 1rem; 
+        font-size: 0.9rem; 
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    /* Grilles */
+    .features { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .about-content { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .stats { 
+        grid-template-columns: 1fr; 
+    }
+    
+    /* Boutons */
+    .cta-buttons { 
+        flex-direction: column; 
+        width: 100%; 
+    }
+    
+    .cta-button { 
+        width: 100%; 
+    }
+    
+    /* Sections */
+    .section-title {
+        font-size: 2rem;
+        margin: 3rem 0 2rem;
+    }
+    
+    .demo-section h2 {
+        font-size: 2rem;
+    }
+    
+    .code-demo {
+        font-size: 0.85rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 { 
+        font-size: 2rem; 
+    }
+    
+    .feature-card {
+        padding: 2rem;
+    }
+    
+    .about-section {
+        padding: 2rem 5%;
+    }
+    
+    .demo-section {
+        padding: 2rem 5%;
+    }
+}
+
+/* ========================================
+   ANIMATIONS SUPPLÉMENTAIRES
+   ======================================== */
+
+/* Animation au scroll */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Effet de brillance sur les boutons */
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+}
+
+.cta-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+/* ========================================
+   UTILITAIRES
+   ======================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-3 { margin-bottom: 3rem; }
+
+.p-1 { padding: 1rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
